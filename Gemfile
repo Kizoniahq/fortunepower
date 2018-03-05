@@ -7,9 +7,8 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.5'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'rails', '~> 5.1.4'
+# Use postgresql as the database for Active Record
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -25,8 +24,25 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem "font-awesome-rails"
+gem "simple_form"
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'devise', github: 'plataformatec/devise'
+gem 'bcrypt-ruby', '~> 3.0.0', :require => "bcrypt"
+gem 'friendly_id'
+gem 'sitemap_generator'
+gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'carrierwave'
+gem "mini_magick"
+gem "fog-aws"
+gem 'social-share-button', '~> 0.1.6'
+# gem 'therubyracer', platforms: :ruby
+gem 'jquery-rails'
+
+gem "active_material", github: "vigetlabs/active_material"
+gem 'activeadmin', github: 'activeadmin'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+# gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -34,6 +50,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+    gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
@@ -46,5 +63,8 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
+group :production do
+  gem 'pg', '~> 0.18'
+end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
