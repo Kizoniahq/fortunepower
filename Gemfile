@@ -26,7 +26,6 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem "font-awesome-rails"
 gem "simple_form"
-gem 'bootstrap-sass', '~> 3.3.7'
 gem 'devise', github: 'plataformatec/devise'
 gem 'bcrypt-ruby', '~> 3.0.0', :require => "bcrypt"
 gem 'friendly_id'
